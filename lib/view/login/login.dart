@@ -27,15 +27,66 @@ class LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Text("Login View!!!!")],
-        ),
-      ),
+//      appBar: AppBar(
+//        title: Text(widget.title),
+//      ),
+      body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/login_bg.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: Container(
+              width: 300,
+              height: 300,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      icon: Icon(
+                        Icons.supervised_user_circle,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                  TextField(
+                    style: TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      icon: Icon(
+                        Icons.keyboard,
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(20),
+                    width: 100,
+                    child: RaisedButton(
+                      textTheme: ButtonTextTheme.accent,
+                      color: Colors.blue,
+                      highlightColor: Colors.deepPurpleAccent,
+                      splashColor: Colors.deepOrangeAccent,
+                      colorBrightness: Brightness.dark,
+                      elevation: 20.0,
+                      highlightElevation: 100.0,
+                      disabledElevation: 20.0,
+                      child: Text(
+                        "登陆",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {
+                        //TODO
+                      },
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )),
     );
   }
 }
