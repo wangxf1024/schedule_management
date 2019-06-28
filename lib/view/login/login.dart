@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'LoginRouter.dart';
+import 'User.dart';
+
 class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -80,6 +83,8 @@ class LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {
                         //TODO
+                        User user = User("wangxf","asd123");
+                        LoginRouter.loginIn(user);
                       },
                     ),
                   )
