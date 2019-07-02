@@ -1,12 +1,12 @@
-import 'view/login/LoginRouter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'view/login/User.dart';
+import 'view/splash/SplashRouter.dart';
 
 class Root {
   //首屏展示的view
   static init() {
-    return LoginRouter.initView(afterInit);
+    return SplashRouter.initView(afterInit);
   }
 
   static afterInit(Object object) {

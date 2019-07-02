@@ -65,27 +65,35 @@ class LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(20),
-                    width: 100,
-                    child: RaisedButton(
-                      textTheme: ButtonTextTheme.accent,
-                      color: Colors.blue,
-                      highlightColor: Colors.deepPurpleAccent,
-                      splashColor: Colors.deepOrangeAccent,
-                      colorBrightness: Brightness.dark,
-                      elevation: 20.0,
-                      highlightElevation: 100.0,
-                      disabledElevation: 20.0,
-                      child: Text(
-                        "登陆",
-                        style: TextStyle(color: Colors.white),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: Container(
+                        margin: EdgeInsets.all(20),
+                        width: 120,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(30))
+                          ),
+                          textTheme: ButtonTextTheme.accent,
+                          color: Colors.blue,
+                          highlightColor: Colors.deepPurpleAccent,
+                          splashColor: Colors.deepOrangeAccent,
+                          colorBrightness: Brightness.dark,
+                          elevation: 20.0,
+                          highlightElevation: 100.0,
+                          disabledElevation: 20.0,
+                          child: Text(
+                            "登陆",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          onPressed: () {
+                            //TODO
+                            User user = User("wangxf","asd123");
+                            LoginRouter.loginIn(user);
+                          },
+                        ),
                       ),
-                      onPressed: () {
-                        //TODO
-                        User user = User("wangxf","asd123");
-                        LoginRouter.loginIn(user);
-                      },
                     ),
                   )
                 ],
